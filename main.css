@@ -2,8 +2,7 @@ header {
   padding: 15px 0;
 }
 
-header .row,
-footer .row {
+header .row {
   display: flex;
   align-items: center;
 }
@@ -11,7 +10,6 @@ footer .row {
 header h1 {
   font-weight: 800;
   margin: 0;
-  align-items: left;
 }
 
 header nav {
@@ -23,11 +21,4 @@ header nav {
 header a {
   padding: 0 20px;
   margin: 0;
-}
-
-.jumbotron {
-  display: flex;
-  align-items: center;
-  height: 300px;
-  text-shadow: 0.25px 0.25px 0.25px #000000;
 }
