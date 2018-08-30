@@ -1,0 +1,24 @@
+<?php 
+	  
+	  $query = $_GET['search'];
+	  //connect  to the database 
+	  include("../controller/db_conection.php");
+	  //-select  the database to use 
+	  $sql = "SELECT * FROM vocab_sis WHERE ('vocabulo' LIKE '$query') ";
+	  //-run  the query against the mysql query function 
+	  $rs=mysqli_query($strcon,$sql); 
+	  //-create  while loop and loop through result set 
+      
+      while($row = mysqli_fetch_array($rs)) {
+
+        // Escreve o valor da coluna FirstName (que está no array $row)
+       echo $row['vocabulo'];
+       echo $row['descricao'];
+       echo $row['fonte'];
+       //vocabProp,descricao,fonte
+
+     }
+
+     // Encerra a conexão
+     mysqli_close($strcon);
+ ?>
